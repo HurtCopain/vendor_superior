@@ -106,6 +106,9 @@ $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 include vendor/superior/config/packages.mk
 include vendor/prebuilts/prebuilts.mk
 
+# Inherit from rro_overlays config
+$(call inherit-product, vendor/superior/config/rro_overlays.mk)
+
 # Superior-specific init rc file
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/init/init.superior-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.superior-system_ext.rc
